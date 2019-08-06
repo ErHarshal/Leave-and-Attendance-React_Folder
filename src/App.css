@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+}
+
+.h1-style{
+  color: cornflowerblue;
+}
+
+.input-style{
+padding: 0.5em;
+margin: 0.5em;
+color: palevioletred;
+background: papayawhip;
+border-radius: 2px;
+border: 2px solid
+}
+
+.label-style{
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;  
+  border-radius: 3px;
+  color:#AA3C39;
+  border: 2px solid;
+  position: relative;
+}
+
+.label-leave-style{
+  font-size: 1em;
+  margin: 0.5em;
+  left: 40%;
+  padding: 0.25em 1em;
+  border-radius: 10px;
+  color:#AA3C39;
+  border: 3px solid;
+  position: relative;
+}
+
+.label-leave1-style{
+  font-size: 1em;
+  margin: 0.5em;
+  left: 30%;
+  padding: 0.25em 1em;
+  color:#AA3C39;
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  left: 37%;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+.button-style{
+  font-size: 1.2em;
+  margin: 1em;
+  padding: 0.25em 1em;  
+  border-radius: 10px;
+  color:#AA3C39;
+  border: 2px solid;
+ background-color: #ccffff;
+}
+
+.form-style{
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 3px;
+  color:#AA3C39;
+  width: 50%;
+  position: relative;
+  justify-content: center;
+}
+
+.table-border{
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 3px;
+  color:#AA3C39;
+  width: 99%;
+  border: 4px solid;
+  position: relative;
+  justify-content: center;
+}
+
+.tabs_style {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.atten-form-style{
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 3px;
+  color:#AA3C39;
+  width: 99%;
+  border: 4px solid;
+  position: relative;
+  justify-content: center;
+}
+
+.type-user-style{
+  margin: 1em;
+  padding: 0.25em 1em;  
+  color:#AA3C39;
+  position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .login {
+    min-width: 80px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Atten {
+    min-width: 80px;
+  }
+}
