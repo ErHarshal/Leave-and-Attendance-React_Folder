@@ -27,7 +27,7 @@ class Leave extends Component
 componentDidMount(){
 axios({
   method: 'post',
-  url: 'http://3.19.59.27:4000/getUserLeave',
+  url: 'http://localhost:4000/getUserLeave',
   headers: {
     "Content-Type": "application/json",
     "Authorization": "Bearer "+localStorage.getItem("username")  
@@ -109,7 +109,7 @@ console.log(flag)
             "username":this.state.user,
               }
               console.log(requestData);
-              axios.post('http://3.19.59.27:4000/leave',requestData)
+              axios.post('http://localhost:4000/leave',requestData)
               .then(response =>{
                 console.log(response)
                 if(response.data.result==='success')

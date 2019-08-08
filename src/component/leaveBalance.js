@@ -39,7 +39,7 @@ class LeaveBalance extends Component
     }
 
     componentDidMount(){
-        axios.get('http://3.19.59.27:4000/fetchzeroleaves') 
+        axios.get('http://localhost:4000/fetchzeroleaves') 
         .then(res=>{
             this.setState({list:res.data})
         })

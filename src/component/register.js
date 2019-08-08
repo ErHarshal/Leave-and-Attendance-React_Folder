@@ -3,6 +3,7 @@ import { Button, Form, FormGroup, Label, Input,Row,Col } from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.css";  
 import axios from 'axios';
 
+
 export default class Register extends Component {
       constructor(props){
         super(props);
@@ -43,7 +44,7 @@ export default class Register extends Component {
     
   }
 
-        axios.post('http://3.19.59.27:4000/register',requestData)
+        axios.post('http://localhost:4000/register',requestData)
         .then(response =>{
           console.log(response)
           if(response.status===200)
@@ -89,7 +90,7 @@ export default class Register extends Component {
         <Col md={3}>
         <FormGroup >
           <Label>Employee Id</Label >
-          <Input type="number" name="empId" value={this.state.empId} onChange={this.handleChange} />
+              <Input type="number" name="empId" value={this.state.empId} onChange={this.handleChange} />         
         </FormGroup>
         </Col>
         </Row>

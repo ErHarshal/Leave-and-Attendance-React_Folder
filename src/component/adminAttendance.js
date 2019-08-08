@@ -36,7 +36,7 @@ class AdminAttendance extends Component
             "date":d,
             "timeperiod":"daily",
         }
-        axios.post('http://3.19.59.27:4000/getAdminattendence',reqdata)
+        axios.post('http://localhost:4000/getAdminattendence',reqdata)
         .then(res=>{
             this.setState({list:res.data})
         })
@@ -52,7 +52,7 @@ class AdminAttendance extends Component
             "timeperiod":"weekly",
         }
         //console.log(reqdata);
-        axios.post('http://3.19.59.27:4000/getAdminattendence',reqdata)
+        axios.post('http://localhost:4000/getAdminattendence',reqdata)
         .then(res=>{
            // console.log(res.data);
             this.setState({list:res.data})
@@ -68,7 +68,7 @@ class AdminAttendance extends Component
             "date":d,
             "timeperiod":"monthly",
         }
-        axios.post('http://3.19.59.27:4000/getAdminattendence',reqdata)
+        axios.post('http://localhost:4000/getAdminattendence',reqdata)
         .then(res=>{
             this.setState({list:res.data})
         })

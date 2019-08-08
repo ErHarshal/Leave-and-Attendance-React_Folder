@@ -1,5 +1,5 @@
 import React ,{Component} from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, Label, Input } from 'reactstrap';
 //import { withRouter } from 'react-router';
 //import '../App.css';
 //import "react-tabs/style/react-tabs.css";
@@ -49,11 +49,12 @@ export default class Login extends Component{
             "type":"user",
             "username": username,
           }
-         await axios.post('http://3.19.59.27:4000/login',requestData)
+         await axios.post('http://localhost:4000/login',requestData)
         .then(response =>{
           console.log(response.data.token)
           if(response.data.result==="success")
           {
+            
             const token=response.data.token;
             localStorage.setItem('username',token);
             this.props.history.push({

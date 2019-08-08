@@ -30,7 +30,7 @@ class EmployeeAttendance extends Component
 
         axios({
             method: 'post',
-            url: 'http://3.19.59.27:4000/getEmployeeAttendence',
+            url: 'http://localhost:4000/getEmployeeAttendence',
             headers: {
               "Content-Type": "application/json",
               "Authorization": "Bearer "+localStorage.getItem("username")  

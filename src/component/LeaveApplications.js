@@ -30,10 +30,10 @@ class LeaveApplications extends Component
     }
 
     componentDidMount(){
-       /* axios.post('http://3.19.59.27:4000/leaveList',reqdata)*/
+       /* axios.post('http://localhost:4000/leaveList',reqdata)*/
        axios({
         method: 'post',
-        url: 'http://3.19.59.27:4000/leaveList',
+        url: 'http://localhost:4000/leaveList',
         headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer "+localStorage.getItem("username")  

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.css";      
 import axios from 'axios';
-import Login, {userName} from './login';
+import {userName} from './login';
 import EmployeeAttendance from './employeeAttendance';
 
  class Atten extends Component
@@ -63,7 +63,7 @@ import EmployeeAttendance from './employeeAttendance';
       if(this.state.inTime!=='' && this.state.outTime!=='' && this.state.date!=='')
       {
         event.preventDefault()
-     /*axios.post('http://3.19.59.27:4000/attendance',requestData)
+     /*axios.post('http://localhost:4000/attendance',requestData)
       .then(response =>{
       //  console.log(response)
         if(response.data.result==='success')
@@ -80,7 +80,7 @@ import EmployeeAttendance from './employeeAttendance';
 
       axios({
         method: 'post',
-        url: 'http://3.19.59.27:4000/attendance',
+        url: 'http://localhost:4000/attendance',
         headers: {
           "Content-Type": "application/json",
           "Authorization": "Bearer "+localStorage.getItem("username")   //"Bearer msdnflksdjflkjglkjdfjsdgjupdifhpogidpofhipodfjgphdj"

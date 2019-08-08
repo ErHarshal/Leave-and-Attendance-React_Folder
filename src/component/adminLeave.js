@@ -24,7 +24,7 @@ const ToList = props=>(
                 "username": props.list.username
                 }
             //console.log(reqdata);
-          await  axios.post('http://3.19.59.27:4000/updateleavestatus',reqdata)
+          await  axios.post('http://localhost:4000/updateleavestatus',reqdata)
             .then(res=>{
                 if(res.data.result==='success')
                 {
@@ -46,7 +46,7 @@ const ToList = props=>(
                     "username": props.list.username
                     }
                // console.log(reqdata);
-              await  axios.post('http://3.19.59.27:4000/updateleavestatus',reqdata)
+              await  axios.post('http://localhost:4000/updateleavestatus',reqdata)
                 .then(res=>{
                     if(res.data.result==='success')
                     {
@@ -72,7 +72,7 @@ handleApprove = props =>
         "typeOfLeave":props.list.typeOfLeave,
     }
     console.log(reqdata);
-    axios.post('http://3.19.59.27:4000/approve',reqdata)
+    axios.post('http://localhost:4000/approve',reqdata)
     .then(res=>{
         if(res.data.result==='success')
         {
@@ -98,7 +98,7 @@ class AdminLeave extends Component
     }
 
     componentDidMount(){
-        axios.get('http://3.19.59.27:4000/leaveList')
+        axios.get('http://localhost:4000/leaveList')
         .then(res=>{
             this.setState({list:res.data})
         })

@@ -30,7 +30,7 @@ class UpdateLeaves extends Component
               "noOfDays":this.state.Nodays
           }
           console.log(data);
-          axios.post('http://3.19.59.27:4000/adminapitoupdateleaves',data)
+          axios.post('http://localhost:4000/adminapitoupdateleaves',data)
           .then(res=>{
             console.log(res);
               if(res.data.nModified===1)

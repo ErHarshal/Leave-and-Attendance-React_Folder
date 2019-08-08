@@ -40,7 +40,7 @@ class EmployeeAvgReports extends Component
             "timeperiod":"weekly",
         }
         //console.log(reqdata);
-        axios.post('http://3.19.59.27:4000/getAvgEmpHrs',reqdata)
+        axios.post('http://localhost:4000/getAvgEmpHrs',reqdata)
         .then(res=>{
            // console.log(res.data);
             this.setState({list:res.data})
@@ -56,7 +56,7 @@ class EmployeeAvgReports extends Component
             "date":d,
             "timeperiod":"monthly",
         }
-        axios.post('http://3.19.59.27:4000/getAvgEmpHrs',reqdata)
+        axios.post('http://localhost:4000/getAvgEmpHrs',reqdata)
         .then(res=>{
             this.setState({list:res.data})
         })
