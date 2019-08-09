@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import axios from 'axios';
-import {userName} from './login';
 import LeaveApplications from './LeaveApplications';
 
 
@@ -14,7 +13,7 @@ class Leave extends Component
                 fromDate:new Date(),
                 typeOfLeave:'Earn Leave',
                 reason:'',
-                user:userName,
+                user:window.atob(localStorage.getItem('user')),
                 earnLeave:0,
                 marrigeLeave:0,
                 casualLeave:0,
@@ -30,10 +29,10 @@ axios({
   url: 'http://localhost:4000/getUserLeave',
   headers: {
     "Content-Type": "application/json",
-    "Authorization": "Bearer "+localStorage.getItem("username")  
+    "Authorization": "Bearer "+localStorage.getItem("token")  
   },
   data: {
-    "username":this.state.user
+    "username":window.atob(localStorage.getItem('user'))
   }
 })
 .then(response=> {

@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { Table } from 'reactstrap';
 import axios from 'axios';
-import { userName } from './login';
+
 
 const ToList = props=>(
     
@@ -21,7 +21,7 @@ class EmployeeAttendance extends Component
         super(props);
 
         this.state={list:[],
-            user:userName,
+            user:window.atob(localStorage.getItem('user')),
         };   
     }
 
@@ -33,7 +33,7 @@ class EmployeeAttendance extends Component
             url: 'http://localhost:4000/getEmployeeAttendence',
             headers: {
               "Content-Type": "application/json",
-              "Authorization": "Bearer "+localStorage.getItem("username")  
+              "Authorization": "Bearer "+localStorage.getItem("token")  
             },
             data: {
               "username":this.state.user

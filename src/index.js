@@ -7,6 +7,7 @@ import Attendance from './component/attendance';
 import Register from './component/register';
 import Admin from './component/admin';
 
+
 //import {BrowserRouter as Route , Router, Switch} from 'react-router-dom';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 const routing = (

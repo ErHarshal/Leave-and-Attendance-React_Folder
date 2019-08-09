@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import { Table } from 'reactstrap';
 import axios from 'axios';
-import { userName } from './login';
 
 
 
@@ -25,7 +24,7 @@ class LeaveApplications extends Component
         super(props);
 
         this.state={list:[],
-            user:userName,
+            user:window.atob(localStorage.getItem('user')),
         };
     }
 

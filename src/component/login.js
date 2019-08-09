@@ -54,9 +54,12 @@ export default class Login extends Component{
           console.log(response.data.token)
           if(response.data.result==="success")
           {
-            
+            // let enc=window.atob(this.state.username);
+            // localStorage.setItem('user',enc);
             const token=response.data.token;
-            localStorage.setItem('username',token);
+            localStorage.setItem('token',token);
+            localStorage.setItem('user',window.btoa(this.state.username));
+            
             this.props.history.push({
               pathname: '/Attend',
             });

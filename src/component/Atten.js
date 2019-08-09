@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.css";      
 import axios from 'axios';
-import {userName} from './login';
 import EmployeeAttendance from './employeeAttendance';
+
 
  class Atten extends Component
  {
@@ -14,13 +14,14 @@ import EmployeeAttendance from './employeeAttendance';
       outTime:null,
       workHourse:null,
       date:new Date(),
-      user:userName,
+      user:window.atob(localStorage.getItem('user')),
     }
     this.handelIntimechange=this.handelIntimechange.bind(this);
     this.handelOuttimechange=this.handelOuttimechange.bind(this);
    // this.changeWorkHourse=this.changeWorkHourse.bind(this);
     this.changedate=this.changedate.bind(this);
     this.handleAtten=this.handleAtten.bind(this);
+    this.handleAuth=this.handleAuth.bind(this);
   }
 
   changedate(event)
@@ -38,6 +39,26 @@ import EmployeeAttendance from './employeeAttendance';
       this.setState({outTime:event.target.value});
       this.setState({workHourse:parseInt(this.state.outTime ,10)- parseInt(this.state.inTime,10)});
   }
+  
+  handleAuth(event)
+  {
+    if(localStorage.getItem('user'))
+    {
+    }
+    else
+    { 
+      alert('goto login page')
+       this.props.history.push({
+        pathname: '/',
+      });
+    }
+  }    
+  componentDidMount()
+  {
+    this.handleAuth();
+  }
+
+
 
   
 
@@ -83,7 +104,7 @@ import EmployeeAttendance from './employeeAttendance';
         url: 'http://localhost:4000/attendance',
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer "+localStorage.getItem("username")   //"Bearer msdnflksdjflkjglkjdfjsdgjupdifhpogidpofhipodfjgphdj"
+          "Authorization": "Bearer "+localStorage.getItem("token")   //"Bearer msdnflksdjflkjglkjdfjsdgjupdifhpogidpofhipodfjgphdj"
         },
         data: {
           "attendate":this.state.date,
@@ -114,6 +135,7 @@ import EmployeeAttendance from './employeeAttendance';
     {
       return (
         <div>
+          
         <Form onSubmit={this.handleAtten} className="atten-form-style">
           <Row form>
             <Col md={3}>

@@ -4,6 +4,7 @@ import Atten from './Atten';
 import Leave from './Leave';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
+import "../App.css"
 
 export default class Attendance extends React.Component {
   render() {
@@ -15,7 +16,8 @@ export default class Attendance extends React.Component {
                   <Tab>Attendance</Tab>
                   <Tab>Leave</Tab> 
                   <button className="logout-button" onClick={()=>{
-                    localStorage.removeItem("username");
+                    localStorage.removeItem("user");
+                    localStorage.removeItem("token");
                     this.props.history.push({
                       pathname:'/',
                     });

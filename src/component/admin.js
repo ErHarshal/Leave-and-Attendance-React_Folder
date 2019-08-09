@@ -19,7 +19,7 @@ export default class Admin extends React.Component {
                   <Tab>Employee Reports</Tab> 
                   <Tab>Update Leave</Tab>
                   <Tab>Leave Balance</Tab>
-                  <button className="logout-button" onClick={()=>{
+                  <button className="logout-button1" onClick={()=>{
                     this.props.history.push({
                       pathname:'/',
                     });
