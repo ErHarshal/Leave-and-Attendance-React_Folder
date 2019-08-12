@@ -36,7 +36,8 @@ const ToList = props=>(
                 console.log(err);
             })
         }
-        }>Approve</button><button onClick={async ()=>
+        }>Approve</button>
+        <button onClick={async ()=>
             {
                 const reqdata={
                     "buttonStatus": "Rejected",

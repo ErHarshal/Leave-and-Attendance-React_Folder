@@ -22,6 +22,7 @@ export default class Attendance extends React.Component {
                       pathname:'/',
                     });
                   }}>Logout</button>
+                  <label className="labelUser">Welcome {window.atob(localStorage.getItem('user'))}</label>
                 </TabList>
 
                 <TabPanel>

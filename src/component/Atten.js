@@ -83,7 +83,7 @@ import EmployeeAttendance from './employeeAttendance';
   {
       if(this.state.inTime!=='' && this.state.outTime!=='' && this.state.date!=='')
       {
-        event.preventDefault()
+      //     event.preventDefault()
      /*axios.post('http://localhost:4000/attendance',requestData)
       .then(response =>{
       //  console.log(response)

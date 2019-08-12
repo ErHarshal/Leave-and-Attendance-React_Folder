@@ -75,7 +75,7 @@ handleLeaveDecrement=()=>
 
 handleLeave=(event)=>
 {
-  event.preventDefault();
+ // event.preventDefault();
 let flag=1;
 console.log(this.state.typeOfLeave)
 if(this.state.typeOfLeave.substring(0,4)==='Earn')
@@ -99,7 +99,7 @@ console.log(flag)
  // console.log(userName);
   if(this.state.toDate!=='' && this.state.fromDate!=='' && this.state.typeOfLeave!=='' && this.state.reason!=='')
   {
-    event.preventDefault()
+  //  event.preventDefault()
     let requestData = {
             "toDate":this.state.toDate,
             "fromDate": this.state.fromDate,
