@@ -10,7 +10,7 @@ export default class Register extends Component {
         this.state={
           firstName:'',
           LastName:'',
-          empId:0,
+          empId:Math.floor(Math.random()*300),
           password:'',
           username:'',
           selectedOption:'male',
