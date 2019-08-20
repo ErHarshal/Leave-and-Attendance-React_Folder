@@ -3,6 +3,7 @@ import { Col, Row, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.css";      
 import axios from 'axios';
 import EmployeeAttendance from './employeeAttendance';
+import {withRouter} from 'react-router-dom'
 
 
  class Atten extends Component
@@ -173,4 +174,4 @@ import EmployeeAttendance from './employeeAttendance';
 
     }
  }
- export default Atten;
+ export default withRouter(Atten);

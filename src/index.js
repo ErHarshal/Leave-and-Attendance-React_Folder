@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -12,8 +12,6 @@ import Admin from './component/admin';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 const routing = (
     <Router>
-      <Fragment>
-          
         <Switch>
           <Route exact path="/" component={App} />
           <Route
@@ -33,7 +31,6 @@ const routing = (
           />
           
         </Switch>
-      </Fragment>
     </Router>
 );
 
